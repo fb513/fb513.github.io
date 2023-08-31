@@ -53,6 +53,39 @@
     <header>
       
   
+    <h1 class="title"><a href="/2017/06/30/其它之Git安装和使用/">Git的安装和使用</a></h1>
+  
+
+      
+        <time datetime="2017-06-30T02:44:31.000Z">2017-06-30</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h4 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a><a href="http://www.cnblogs.com/seayxu/p/5548243.html" target="_blank" rel="noopener">Hexo配置</a></h4><p>重装hexo时，直接从Git上克隆下源码然后直接执行npm install –save hexo-deployer-git命令就好。<br>
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2017/06/30/其它之Git安装和使用/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2017/06/25/其它之Redis基础/">Redis基础</a></h1>
   
 
@@ -304,48 +337,6 @@
 
 
 
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2017/06/22/Java基础之内部类/">Java内部类</a></h1>
-  
-
-      
-        <time datetime="2017-06-22T02:09:31.000Z">2017-06-22</time>
-      
-    </header>
-    <div class="entry">
-      
-        <h3 id="非静态内部内与静态内部类"><a href="#非静态内部内与静态内部类" class="headerlink" title="非静态内部内与静态内部类"></a>非静态内部内与静态内部类</h3><pre><code>// 构建一个静态内部类实例
-Outer.Inner in = new Outer.Inner();
-// 方法静态内部类的静态方法
-Outer.Inner.静态方法();
-// 构建一个非静态内部类
-Outer.Inner in = new Outer().new Inner();
-</code></pre><ul>
-<li>非静态内部类：相当于一个成员函数的位置。可以使用任意访问控制符，如public、protected、private等。</li>
-<li>静态内部类：相当于外部内。</li>
-<li>非静态内部类不能存在任何static的变量和方法，但是可以定义常量。因为非静态内部类是要依赖于外部类的实例，而静态变量和方法是不依赖对象的，仅于类相关。即在加载静态域时，根本没有外部类。常量是编译器就可以确定的，放在常量池中。
-      
-    </div>
-      
-        
-        <footer>
-          <div class="alignleft">
-            <a href="/2017/06/22/Java基础之内部类/#more" class="more-link">Read More ›</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-      </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -431,6 +422,10 @@ Outer.Inner in = new Outer().new Inner();
       </li>
     
       <li>
+        <a href="/2023/08/30/基础之MySQL原理/">MySQL原理</a>
+      </li>
+    
+      <li>
         <a href="/2020/11/14/基础之加密算法/">加密算法基础</a>
       </li>
     
@@ -440,10 +435,6 @@ Outer.Inner in = new Outer().new Inner();
     
       <li>
         <a href="/2020/08/13/Python基础/">Python基础</a>
-      </li>
-    
-      <li>
-        <a href="/2020/07/11/其它之Docker基础/">Docker基础</a>
       </li>
     
   </ul>
