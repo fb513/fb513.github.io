@@ -53,6 +53,53 @@
     <header>
       
   
+    <h1 class="title"><a href="/2020/07/11/其它之Docker基础/">Docker基础</a></h1>
+  
+
+      
+        <time datetime="2020-07-11T07:33:52.000Z">2020-07-11</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ul>
+<li>docker info: 查看Docker服务是否正常。</li>
+<li>docker images: 查看所有镜像。</li>
+<li>docker ps -a: 查看当前系统中存在的容器。-a表示无论是否在运行中，都会被查找到。</li>
+<li>docker start/stop name: 启动或停止容器。</li>
+<li>docker rm name: 删除容器。运行中的容器是无法直接删除的，需要先停止容器运行后才能将其删除。</li>
+<li>docker rmi name: 删除Image。</li>
+<li>docker logs -f -t name: 查看容器日志。-f表示用于监控容器的日志，功能类似于tail -f。-t用来添加时间戳。</li>
+<li>docker exec -it name /bin/bash: 在容器内运行进程。</li>
+<li>docker build -t weather:v1.0 ./: 构建一个镜像。</li>
+<li>docker run -d -p 80:8080 –name weather weather:v1.0: 运行镜像。</li>
+<li>docker tag weather:v1.0 fengbo4213/test:v1.0: 给镜像打标签。</li>
+<li>docker push fengbo4213/test:v1.0: 推送到DockerHub。</li>
+<li>docker cp weather:/app ./: 将未启动容器中的内容拷贝出来，方便查看。</li>
+<li>docker inspect name: 查看容器详细信息。
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2020/07/11/其它之Docker基础/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2020/06/21/路由器之HG255D刷OpenWRT/">HG255D刷OpenWRT</a></h1>
   
 
@@ -297,41 +344,6 @@
 
 
 
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2019/10/10/基础之网络编程模型/">网络编程模型</a></h1>
-  
-
-      
-        <time datetime="2019-10-10T02:22:43.000Z">2019-10-10</time>
-      
-    </header>
-    <div class="entry">
-      
-        <h3 id="线程驱动和事件驱动"><a href="#线程驱动和事件驱动" class="headerlink" title="线程驱动和事件驱动"></a>线程驱动和事件驱动</h3><ul>
-<li>线程驱动：当收到一个请求的时候，将会为该请求开一个新的线程来处理请求。一般存在一个线程池，线程池中有空闲的线程，会从线程池中拿取线程来进行处理，如果线程池中没有空闲的线程，新来的请求将会进入队列排队，直到线程池中空闲线程。</li>
-<li>事件驱动：当进来一个新的请求的时，请求将会被压入队列中，然后通过一个循环来检测队列中的事件状态变化，如果检测到有状态变化的事件，那么就执行该事件对应的处理代码，一般都是回调函数。<b>对于事件驱动编程来说，如果某个时间的回调函数是计算密集型，或者是阻塞I/O,那么这个回调函数将会阻塞后面所有事件回调函数的执行。</b>
-      
-    </div>
-      
-        
-        <footer>
-          <div class="alignleft">
-            <a href="/2019/10/10/基础之网络编程模型/#more" class="more-link">Read More ›</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-      </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -425,11 +437,11 @@
       </li>
     
       <li>
-        <a href="/2023/10/30/WebRTC之简介/">WebRTC简介</a>
+        <a href="/2023/10/31/WebRTC之Coturn安装/">Coturn安装</a>
       </li>
     
       <li>
-        <a href="/2020/11/14/基础之加密算法/">加密算法基础</a>
+        <a href="/2023/10/30/WebRTC之简介/">WebRTC简介</a>
       </li>
     
   </ul>

@@ -84,6 +84,29 @@
   </entry>
   
   <entry>
+    <title>Coturn安装</title>
+    <link href="http://yoursite.com/2023/10/31/WebRTC%E4%B9%8BCoturn%E5%AE%89%E8%A3%85/"/>
+    <id>http://yoursite.com/2023/10/31/WebRTC之Coturn安装/</id>
+    <published>2023-10-31T07:33:52.000Z</published>
+    <updated>2023-11-12T02:10:16.290Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://k09fnt46xc.feishu.cn/docx/CNesdLV1QoK455xOKTkcvWRKnEg?from=from_copylink" target="_blank" rel="noopener">Coturn安装</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://k09fnt46xc.feishu.cn/docx/CNesdLV1QoK455xOKTkcvWRKnEg?from=from_copylink&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Coturn安装&lt;/a&gt;&lt;/p
+      
+    
+    </summary>
+    
+    
+      <category term="WebRTC" scheme="http://yoursite.com/tags/WebRTC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>WebRTC简介</title>
     <link href="http://yoursite.com/2023/10/30/WebRTC%E4%B9%8B%E7%AE%80%E4%BB%8B/"/>
     <id>http://yoursite.com/2023/10/30/WebRTC之简介/</id>
@@ -465,26 +488,6 @@
     <summary type="html">
     
       &lt;p&gt;统中有一套完整的类结构，而我们需要利用其中摸某一个类的功能（即方法），但是我们的客户端只认识另一个和这个类结构不相关的接口，这时候就可以使用适配器模式将这个现有的类与我们的目标接口进行适配，最终获得一个符合需要的接口并包含复用的类的功能的类。本来是火鸡却实现鸭子接口，当你客户需要一个鸭子的时候，就可以假装成鸭子。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java设计模式之观察者模式</title>
-    <link href="http://yoursite.com/2019/07/15/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2019/07/15/Java设计模式之观察者模式/</id>
-    <published>2019-07-15T11:16:15.000Z</published>
-    <updated>2021-07-03T01:30:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>观察者模式（又称发布-订阅模式），即一个目标物体管理所有依赖于他的观察者物体，并且在它本身状态改变时，它的所有依赖者都会收到通知并自动更新。<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Observer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(Observable o)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteObserver1</span> <span class="keyword">implements</span> <span class="title">Observer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(Observable o)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"观察者1观察到"</span> + o.getClass().getSimpleName() + <span class="string">"发生变化"</span>);</span><br><span class="line">        System.out.println(<span class="string">"观察者1做出相应"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ConcreteObserver2</span> <span class="keyword">implements</span> <span class="title">Observer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(Observable o)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"观察者1观察到"</span> + o.getClass().getSimpleName() + <span class="string">"发生变化"</span>);</span><br><span class="line">        System.out.println(<span class="string">"观察者1做出相应"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 被观察者</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> fengbo</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Observable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> List&lt;Observer&gt; observers = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">addObserver</span><span class="params">(Observer o)</span> </span>&#123;</span><br><span class="line">        observers.add(o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">changed</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我是被观察者，我已经发生变化了"</span>);</span><br><span class="line">        <span class="comment">// 通知观察自己的所有观察者</span></span><br><span class="line">        notifyObservers();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">notifyObservers</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (Observer observer : observers) &#123;</span><br><span class="line">            observer.update(<span class="keyword">this</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Observable observable = <span class="keyword">new</span> Observable();</span><br><span class="line">        observable.addObserver(<span class="keyword">new</span> ConcreteObserver1());</span><br><span class="line">        observable.addObserver(<span class="keyword">new</span> ConcreteObserver2());</span><br><span class="line">        observable.changed();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;观察者模式（又称发布-订阅模式），即一个目标物体管理所有依赖于他的观察者物体，并且在它本身状态改变时，它的所有依赖者都会收到通知并自动更新。&lt;br&gt;
     
     </summary>
     
