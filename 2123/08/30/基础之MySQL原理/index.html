@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>MySQL原理 › 但行好事，莫问前程</title>
+  <meta name="author" content="fengbo">
+  
+  <meta name="description" content="不想当架构师的程序员不是好厨师 ，不认为PHP是世界上最好的编程语言的Python开发者不是一个好的Javaer。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="MySQL原理">
+  <meta property="og:site_name" content="但行好事，莫问前程">
+
+  
+    <meta property="og:image" content="undefined">
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="但行好事，莫问前程" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+</html>
+
+<body>
+  <header id="header"><div class="meta inner">
+  <h1><a href="/">但行好事，莫问前程</a></h1>
+  <h2><a href="/">CV工程师，了解面向Google编程的基本原理，有三年使用Google经验，在通往程序员的道路上艰难的爬行着。</a></h2>
+  <nav id="main-nav">
+    <ul>
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/archives">Archives</a></li>
+      
+      <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+</div>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">MySQL原理</h1>
+  
+
+      
+        <time datetime="2123-08-30T11:53:07.000Z">2123-08-30</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="MySQL总结"><a href="#MySQL总结" class="headerlink" title="MySQL总结"></a><a href="https://k09fnt46xc.feishu.cn/mindnotes/DsD0b9D2ymOvuRnWMFaccz0Mnoh?from=from_copylink" target="_blank" rel="noopener">MySQL总结</a></h3><h3 id="MySQL-姜承尧视频课总结-视频地址"><a href="#MySQL-姜承尧视频课总结-视频地址" class="headerlink" title="MySQL-姜承尧视频课总结 | 视频地址"></a><a href="https://k09fnt46xc.feishu.cn/docx/doxcn1scyTvUP8eJyonRrqyeu9c?from=from_copylink" target="_blank" rel="noopener">MySQL-姜承尧视频课总结</a> | <a href="https://www.bilibili.com/video/BV1nK411r7Vz/?spm_id_from=333.337.search-card.all.click&amp;vd_source=90b7ed956776b0dd8633d9fbaa6ff30d" target="_blank" rel="noopener">视频地址</a></h3><h3 id="MySQL实战45讲总结-MySQL实战45讲精选评论-课程地址"><a href="#MySQL实战45讲总结-MySQL实战45讲精选评论-课程地址" class="headerlink" title="MySQL实战45讲总结 | MySQL实战45讲精选评论 | 课程地址"></a><a href="https://k09fnt46xc.feishu.cn/docx/JKL8dMZIaoR47MxcJDCcHHcTnhb?from=from_copylink" target="_blank" rel="noopener">MySQL实战45讲总结</a> | <a href="https://k09fnt46xc.feishu.cn/docx/X3MOdiLHvo4dyuxTMwocKPAeneb?from=from_copylink" target="_blank" rel="noopener">MySQL实战45讲精选评论</a> | <a href="https://time.geekbang.org/column/article/68319" target="_blank" rel="noopener">课程地址</a></h3><h2 id="其他优秀的MySQL学习资料"><a href="#其他优秀的MySQL学习资料" class="headerlink" title="其他优秀的MySQL学习资料"></a>其他优秀的MySQL学习资料</h2><h3 id="MySQL是怎样运行的"><a href="#MySQL是怎样运行的" class="headerlink" title="MySQL是怎样运行的"></a><a href="https://juejin.cn/book/6844733769996304392?enter_from=course_center&amp;utm_source=course_center" target="_blank" rel="noopener">MySQL是怎样运行的</a></h3><p>非常值得推荐，实体书更棒，作者大大是一个非常有情怀的理想主义者。</p>
+<h3 id="姜老师的MySQL技术内幕"><a href="#姜老师的MySQL技术内幕" class="headerlink" title="姜老师的MySQL技术内幕"></a><a href="https://book.douban.com/subject/24708143/" target="_blank" rel="noopener">姜老师的MySQL技术内幕</a></h3><p>配合上面的视频看效果更佳。</p>
+<h2 id="网络上一些有意思的线上问题"><a href="#网络上一些有意思的线上问题" class="headerlink" title="网络上一些有意思的线上问题"></a>网络上一些有意思的线上问题</h2><h3 id="稀疏文件和磁盘报警-范围查询导致的死锁-一个最不可思议的MySQL死锁分析-主键和唯一索引导致的死锁"><a href="#稀疏文件和磁盘报警-范围查询导致的死锁-一个最不可思议的MySQL死锁分析-主键和唯一索引导致的死锁" class="headerlink" title="稀疏文件和磁盘报警 | 范围查询导致的死锁 | 一个最不可思议的MySQL死锁分析 | 主键和唯一索引导致的死锁"></a><a href="https://www.cnblogs.com/lemon-le/p/11551367.html" target="_blank" rel="noopener">稀疏文件和磁盘报警</a> | <a href="https://k09fnt46xc.feishu.cn/docx/RzLydns3Vo4hWGxBf3CcZpJwn4c?from=from_copylink" target="_blank" rel="noopener">范围查询导致的死锁</a> | <a href="https://k09fnt46xc.feishu.cn/docx/UDwddZy4PoTbpfxUUkLcmvz7nCh?from=from_copylink" target="_blank" rel="noopener">一个最不可思议的MySQL死锁分析</a> | <a href="https://k09fnt46xc.feishu.cn/docx/Y9BAdTJploFcj7x5DZkcV5hnn6a?from=from_copylink" target="_blank" rel="noopener">主键和唯一索引导致的死锁</a></h3>
+      
+    </div>
+      
+      <footer>
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/计算机基础/">计算机基础</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+<!-- 来必力City版安装代码 -->
+<!-- <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ5MS82MDU5">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div> -->
+<!-- City版安装代码已完成 -->
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tagcloud">
+  <h3 class="title">文章分类</h3>
+  <div class="entry">
+    <a href="/tags/JavaWeb/" style="font-size: 17.14px;">JavaWeb</a> <a href="/tags/Java基础/" style="font-size: 15.71px;">Java基础</a> <a href="/tags/Java高级特性/" style="font-size: 15.71px;">Java高级特性</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Spring基础/" style="font-size: 14.29px;">Spring基础</a> <a href="/tags/其它/" style="font-size: 18.57px;">其它</a> <a href="/tags/分布式/" style="font-size: 11.43px;">分布式</a> <a href="/tags/硬件/" style="font-size: 12.86px;">硬件</a> <a href="/tags/计算机基础/" style="font-size: 20px;">计算机基础</a> <a href="/tags/设计模式/" style="font-size: 17.14px;">设计模式</a>
+  </div>
+</div>
+
+
+
+    <div class="widget tagcloud">
+    <h3 class="title">电子书</h3>
+    <ul class="entry">
+      <li class='link'><a href='http://www.duokan.com/' target="_blank">多看阅读</a>&nbsp;&nbsp;<a href='https://read.douban.com/' target="_blank">豆瓣阅读</a>&nbsp;&nbsp;<a href='http://e.dangdang.com/' target="_blank">当当阅读</a></li>
+      <li class='link'><a href='http://www.ituring.com.cn/' target="_blank">图灵社区</a>&nbsp;&nbsp;<a href='https://www.epubit.com/' target="_blank">异步社区</a>&nbsp;&nbsp;<a href='https://www.geekbang.org/' target="_blank">极客空间</a></li>
+    </ul>
+  </div>
+
+
+  
+  <div class="widget tag">
+    <h3 class="title">友情链接</h3>
+      <ul class="entry">
+        
+          <li class='link'><a href='http://www.cnblogs.com/jietang/' target="_blank">唐洁的博客</a></li>
+        
+          <li class='link'><a href='http://rednaxelafx.iteye.com/' target="_blank">R大的博客</a></li>
+        
+          <li class='link'><a href='http://www.hollischuang.com/' target="_blank">阿里大神的博客</a></li>
+        
+          <li class='link'><a href='http://blog.csdn.net/IT_faquir/' target="_blank">IT_faquir的专栏</a></li>
+        
+      </ul>
+  </div>
+
+
+  
+  <div class="widget tag">
+    <h3 class="title">思维导图</h3>
+      <ul class="entry">
+        
+          <li class='link'><a href='https://fengbo4213.github.io/img/开源协议.png' target="_blank">开源协议简介</a></li>
+        
+          <li class='link'><a href='https://www.processon.com/diagraming/5b0cf757e4b009aef58d4b9d' target="_blank">我的知识体系</a></li>
+        
+          <li class='link'><a href='https://www.processon.com/view/link/5a2a00e5e4b015e677290b4f' target="_blank">简单的网站架构</a></li>
+        
+      </ul>
+  </div>
+
+
+  
+  <div class="widget tag">
+    <h3 class="title">在线手册</h3>
+      <ul class="entry">
+        
+          <li class='link'><a href='http://v3.bootcss.com/' target="_blank">BootStrap官方手册</a></li>
+        
+          <li class='link'><a href='http://www.iconfont.cn/http://element.eleme.io/#/zh-CN/' target="_blank">阿里巴巴矢量图标库</a></li>
+        
+      </ul>
+  </div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">最新文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/3017/08/16/一些知识点的链接/"></a>
+      </li>
+    
+      <li>
+        <a href="/2123/08/30/基础之MySQL原理/">MySQL原理</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/01/其它之PostgreSQL基础/">PostgreSQL基础使用</a>
+      </li>
+    
+      <li>
+        <a href="/2020/11/14/基础之加密算法/">加密算法基础</a>
+      </li>
+    
+      <li>
+        <a href="/2020/10/18/基础之Linux文件操作/">Linux文件操作</a>
+      </li>
+    
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2023 fengbo
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+
+</body>
+</html>
+
