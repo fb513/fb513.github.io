@@ -53,6 +53,41 @@
     <header>
       
   
+    <h1 class="title"><a href="/2017/06/22/Java基础之序列化/">Java序列化</a></h1>
+  
+
+      
+        <time datetime="2017-06-22T06:08:37.000Z">2017-06-22</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="序列化ID问题"><a href="#序列化ID问题" class="headerlink" title="序列化ID问题"></a>序列化ID问题</h3><ul>
+<li>Java的序列化是通过在运行时判断类的serialVersionUID来验证版本的一致性的。在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地相应类的serialVersionUID进行比较。如果相同就认为是一致的，可以进行反序列化，否则抛出序列化版本不一致异常。</li>
+<li>如果没有特殊需求，就是用默认的 1L 就可以，这样可以确保代码一致时反序列化成功。但是有些时候，通过改变序列化ID可以用来限制某些用户的使用。既当client需要一个从server端生成的对象时，如果server端希望client端进行版本升级，就可以改变自己的serialVersionUID来强迫client端进行升级。
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2017/06/22/Java基础之序列化/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2017/06/22/Java基础之枚举/">Java枚举</a></h1>
   
 
@@ -248,7 +283,7 @@ public  protected  default  private volatile synchronized 保留字(goto  const)
 <div class="widget tagcloud">
   <h3 class="title">文章分类</h3>
   <div class="entry">
-    <a href="/tags/JavaWeb/" style="font-size: 17.14px;">JavaWeb</a> <a href="/tags/Java基础/" style="font-size: 15.71px;">Java基础</a> <a href="/tags/Java高级特性/" style="font-size: 15.71px;">Java高级特性</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Spring基础/" style="font-size: 14.29px;">Spring基础</a> <a href="/tags/其它/" style="font-size: 18.57px;">其它</a> <a href="/tags/分布式/" style="font-size: 11.43px;">分布式</a> <a href="/tags/硬件/" style="font-size: 12.86px;">硬件</a> <a href="/tags/计算机基础/" style="font-size: 20px;">计算机基础</a> <a href="/tags/设计模式/" style="font-size: 17.14px;">设计模式</a>
+    <a href="/tags/JavaWeb/" style="font-size: 17.5px;">JavaWeb</a> <a href="/tags/Java基础/" style="font-size: 16.25px;">Java基础</a> <a href="/tags/Java高级特性/" style="font-size: 16.25px;">Java高级特性</a> <a href="/tags/Python/" style="font-size: 11.25px;">Python</a> <a href="/tags/Spring基础/" style="font-size: 15px;">Spring基础</a> <a href="/tags/WebRTC/" style="font-size: 10px;">WebRTC</a> <a href="/tags/其它/" style="font-size: 18.75px;">其它</a> <a href="/tags/分布式/" style="font-size: 12.5px;">分布式</a> <a href="/tags/硬件/" style="font-size: 13.75px;">硬件</a> <a href="/tags/计算机基础/" style="font-size: 20px;">计算机基础</a> <a href="/tags/设计模式/" style="font-size: 17.5px;">设计模式</a>
   </div>
 </div>
 
@@ -326,11 +361,11 @@ public  protected  default  private volatile synchronized 保留字(goto  const)
       </li>
     
       <li>
-        <a href="/2020/11/14/基础之加密算法/">加密算法基础</a>
+        <a href="/2023/10/30/WebRTC之简介/">WebRTC简介</a>
       </li>
     
       <li>
-        <a href="/2020/10/18/基础之Linux文件操作/">Linux文件操作</a>
+        <a href="/2020/11/14/基础之加密算法/">加密算法基础</a>
       </li>
     
   </ul>
