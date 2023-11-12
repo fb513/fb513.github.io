@@ -38,6 +38,29 @@
   </entry>
   
   <entry>
+    <title>Docker基础</title>
+    <link href="http://yoursite.com/2023/11/01/%E5%85%B6%E5%AE%83%E4%B9%8BPostgreSQL%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2023/11/01/其它之PostgreSQL基础/</id>
+    <published>2023-11-01T07:33:52.000Z</published>
+    <updated>2023-11-12T01:48:00.826Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://k09fnt46xc.feishu.cn/docx/KThfdGyy6o9c9nx9kiicFZ0DnYc?from=from_copylink" target="_blank" rel="noopener">PostgreSQL基础使用</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://k09fnt46xc.feishu.cn/docx/KThfdGyy6o9c9nx9kiicFZ0DnYc?from=from_copylink&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;PostgreSQL基础使用&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="其它" scheme="http://yoursite.com/tags/%E5%85%B6%E5%AE%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL原理</title>
     <link href="http://yoursite.com/2023/08/30/%E5%9F%BA%E7%A1%80%E4%B9%8BMySQL%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2023/08/30/基础之MySQL原理/</id>
@@ -459,26 +482,6 @@
     <summary type="html">
     
       &lt;p&gt;代理模式一般分为静态代理和动态代理。两种代理从虚拟机加载类的角度来讲，本质上都是一样的，都是在原有类的基础上加入一些其他的逻辑，产生一个新的与原有类接口相同确行为不同的类型。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java设计模式之策略模式</title>
-    <link href="http://yoursite.com/2019/07/15/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2019/07/15/Java设计模式之策略模式/</id>
-    <published>2019-07-15T11:04:33.000Z</published>
-    <updated>2021-07-03T01:30:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>策略模式定义和封装了一系列的算法，并将每一个算法封装起来，使他们可以相互替换。策略模式让算法独立于使用它的用户而存在。Java8对策略模式进行了很好的封装。<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">FlyBehavior</span> </span>&#123;</span><br><span class="line">    <span class="comment">/** 飞行方式 */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 火箭飞行策略</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> fengbo</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FlyWithRocket</span> <span class="keyword">implements</span> <span class="title">FlyBehavior</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我可以靠着火箭飞！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 翅膀飞行策略</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> fengbo</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FlyWithWings</span> <span class="keyword">implements</span> <span class="title">FlyBehavior</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我可以靠着翅膀飞！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Duck</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> FlyBehavior flyBehavior;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">setFlyBehavior</span><span class="params">(FlyBehavior flyBehavior)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.flyBehavior = flyBehavior;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">performFly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        flyBehavior.fly();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 行为参数化版策略模式，参考Java8实战，第二章通过行为参数化传递代码</span></span><br><span class="line"><span class="comment">     * 可以使用java.util.function包里的接口替换FlyBehavior接口</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> flyBehavior 具体的飞行策略</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">performFly</span><span class="params">(FlyBehavior flyBehavior)</span> </span>&#123;</span><br><span class="line">        flyBehavior.fly();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">performFly</span><span class="params">(String str, Consumer&lt;String&gt; consumer)</span> </span>&#123;</span><br><span class="line">        consumer.accept(str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        FlyBehavior flyBehavior = <span class="keyword">new</span> FlyWithWings();</span><br><span class="line">        Duck duck = <span class="keyword">new</span> Duck();</span><br><span class="line">        duck.setFlyBehavior(flyBehavior);</span><br><span class="line">        duck.performFly();</span><br><span class="line">        duck.setFlyBehavior(<span class="keyword">new</span> FlyWithRocket());</span><br><span class="line">        duck.performFly();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// lambda简写策略模式</span></span><br><span class="line">        duck.performFly(() -&gt; System.out.println(<span class="string">"我可以靠着风筝飞"</span>));</span><br><span class="line">        duck.performFly(<span class="string">"我可以靠着智商飞"</span>, System.out::println);</span><br><span class="line">        <span class="comment">// 等同于下面</span></span><br><span class="line"><span class="comment">//        duck.performFly("我可以靠着智商飞", (str) -&gt; System.out.println(str));</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;策略模式定义和封装了一系列的算法，并将每一个算法封装起来，使他们可以相互替换。策略模式让算法独立于使用它的用户而存在。Java8对策略模式进行了很好的封装。&lt;br&gt;
     
     </summary>
     
