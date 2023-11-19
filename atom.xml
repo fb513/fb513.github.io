@@ -84,6 +84,29 @@
   </entry>
   
   <entry>
+    <title>音视频基础概念</title>
+    <link href="http://yoursite.com/2023/10/31/WebRTC%E4%B9%8B%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+    <id>http://yoursite.com/2023/10/31/WebRTC之音视频基础概念/</id>
+    <published>2023-10-31T07:33:52.000Z</published>
+    <updated>2023-11-19T12:02:39.643Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://k09fnt46xc.feishu.cn/docx/C79zdd7hrotX18xFUkEcT7XHnNd?from=from_copylink" target="_blank" rel="noopener">音视频基础概念</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://k09fnt46xc.feishu.cn/docx/C79zdd7hrotX18xFUkEcT7XHnNd?from=from_copylink&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;音视频基础概念&lt;/a&gt;&lt;/p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="WebRTC" scheme="http://yoursite.com/tags/WebRTC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Coturn安装</title>
     <link href="http://yoursite.com/2023/10/31/WebRTC%E4%B9%8BCoturn%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2023/10/31/WebRTC之Coturn安装/</id>
@@ -473,26 +496,6 @@
     
     
       <category term="Java基础" scheme="http://yoursite.com/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java设计模式之适配器模式</title>
-    <link href="http://yoursite.com/2019/07/15/Java%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2019/07/15/Java设计模式之适配器模式/</id>
-    <published>2019-07-15T11:19:54.000Z</published>
-    <updated>2021-07-03T01:30:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>统中有一套完整的类结构，而我们需要利用其中摸某一个类的功能（即方法），但是我们的客户端只认识另一个和这个类结构不相关的接口，这时候就可以使用适配器模式将这个现有的类与我们的目标接口进行适配，最终获得一个符合需要的接口并包含复用的类的功能的类。本来是火鸡却实现鸭子接口，当你客户需要一个鸭子的时候，就可以假装成鸭子。<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Duck</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">quack</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Turkey</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">quack</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TurkeyAdapter</span> <span class="keyword">implements</span> <span class="title">Duck</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Turkey turkey;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">TurkeyAdapter</span><span class="params">(Turkey turkey)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.turkey = turkey;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        turkey.quack();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        turkey.fly();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Duck duck = <span class="keyword">new</span> TurkeyAdapter(<span class="keyword">new</span> Turkey() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"咯咯叫！"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fly</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">"火鸡飞不远！"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        duck.fly();</span><br><span class="line">        duck.quack();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;统中有一套完整的类结构，而我们需要利用其中摸某一个类的功能（即方法），但是我们的客户端只认识另一个和这个类结构不相关的接口，这时候就可以使用适配器模式将这个现有的类与我们的目标接口进行适配，最终获得一个符合需要的接口并包含复用的类的功能的类。本来是火鸡却实现鸭子接口，当你客户需要一个鸭子的时候，就可以假装成鸭子。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
