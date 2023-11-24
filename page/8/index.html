@@ -53,6 +53,43 @@
     <header>
       
   
+    <h1 class="title"><a href="/2017/10/18/Java高级特性之对象的创建/">Java对象的创建</a></h1>
+  
+
+      
+        <time datetime="2017-10-18T13:03:58.000Z">2017-10-18</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h2 id="对象创建时机"><a href="#对象创建时机" class="headerlink" title="对象创建时机"></a>对象创建时机</h2><ul>
+<li>使用new关键字创建对象；</li>
+<li>使用反射创建对象：即使用Class类的newInstance方法、Constructor类的newInstance方法等创建对象；</li>
+<li>使用Clone方法创建一个对象：无论何时我们调用一个对象的clone方法，JVM都会帮助我们创建一个新的、一样的对象，且该对象的创建过程中并不会调用任何构造函数。</li>
+<li>使用反序列化机制创建对象：当我们反序列化一个对象时，JVM会给我们创建一个单独的对象，且JVM并不会调用任何构造函数。
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2017/10/18/Java高级特性之对象的创建/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2017/09/30/Java高级特性之Java虚拟机/">Java虚拟机</a></h1>
   
 
@@ -281,45 +318,6 @@
 
 
 
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2017/06/22/JavaWeb-Cookie和Session/">Cookie和Session</a></h1>
-  
-
-      
-        <time datetime="2017-06-22T10:53:21.000Z">2017-06-22</time>
-      
-    </header>
-    <div class="entry">
-      
-        <h3 id="Cookie对象添加和获取"><a href="#Cookie对象添加和获取" class="headerlink" title="Cookie对象添加和获取"></a>Cookie对象添加和获取</h3><ul>
-<li>使用response.addCookie()方法向浏览器保存Cookie</li>
-<li>使用request.getCookeis()方法返回一个Cookie数组</li>
-<li>Http协议规定<ul>
-<li>一个Cookie最大4kb</li>
-<li>一个服务器最多向一个浏览器保存20个Cookie</li>
-<li>一个浏览器最多可以保存300个Cookie
-      
-    </div>
-      
-        
-        <footer>
-          <div class="alignleft">
-            <a href="/2017/06/22/JavaWeb-Cookie和Session/#more" class="more-link">Read More ›</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-      </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -335,7 +333,7 @@
 <div class="widget tagcloud">
   <h3 class="title">文章分类</h3>
   <div class="entry">
-    <a href="/tags/JavaWeb/" style="font-size: 17.14px;">JavaWeb</a> <a href="/tags/Java基础/" style="font-size: 15.71px;">Java基础</a> <a href="/tags/Java高级特性/" style="font-size: 15.71px;">Java高级特性</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Spring基础/" style="font-size: 14.29px;">Spring基础</a> <a href="/tags/WebRTC/" style="font-size: 10px;">WebRTC</a> <a href="/tags/其它/" style="font-size: 18.57px;">其它</a> <a href="/tags/分布式/" style="font-size: 11.43px;">分布式</a> <a href="/tags/硬件/" style="font-size: 12.86px;">硬件</a> <a href="/tags/计算机基础/" style="font-size: 20px;">计算机基础</a> <a href="/tags/设计模式/" style="font-size: 17.14px;">设计模式</a>
+    <a href="/tags/JavaWeb/" style="font-size: 18.33px;">JavaWeb</a> <a href="/tags/Java基础/" style="font-size: 16.67px;">Java基础</a> <a href="/tags/Java高级特性/" style="font-size: 16.67px;">Java高级特性</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Spring基础/" style="font-size: 15px;">Spring基础</a> <a href="/tags/WebRTC/" style="font-size: 10px;">WebRTC</a> <a href="/tags/其它/" style="font-size: 20px;">其它</a> <a href="/tags/分布式/" style="font-size: 11.67px;">分布式</a> <a href="/tags/硬件/" style="font-size: 13.33px;">硬件</a> <a href="/tags/计算机基础/" style="font-size: 20px;">计算机基础</a> <a href="/tags/设计模式/" style="font-size: 18.33px;">设计模式</a>
   </div>
 </div>
 
@@ -409,15 +407,15 @@
       </li>
     
       <li>
+        <a href="/2023/11/24/其它之RabbitMQ基于Raft算法实现的Quorum队列的使用/">RabbitMQ基于Raft算法实现的Quorum队列的使用</a>
+      </li>
+    
+      <li>
         <a href="/2023/11/19/WebRTC之音视频基础概念/">音视频基础概念</a>
       </li>
     
       <li>
         <a href="/2023/11/01/其它之PostgreSQL基础/">PostgreSQL基础使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/10/31/WebRTC之Coturn安装/">Coturn安装</a>
       </li>
     
   </ul>

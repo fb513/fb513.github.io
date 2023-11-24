@@ -61,6 +61,29 @@
   </entry>
   
   <entry>
+    <title>RabbitMQ基于Raft算法实现的Quorum队列的使用</title>
+    <link href="http://yoursite.com/2023/11/24/%E5%85%B6%E5%AE%83%E4%B9%8BRabbitMQ%E5%9F%BA%E4%BA%8ERaft%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%E7%9A%84Quorum%E9%98%9F%E5%88%97%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2023/11/24/其它之RabbitMQ基于Raft算法实现的Quorum队列的使用/</id>
+    <published>2023-11-24T07:33:52.000Z</published>
+    <updated>2023-11-24T02:16:51.583Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://k09fnt46xc.feishu.cn/docx/UpaudOcYIoYJiQxheJcc7VHHnSg?from=from_copylink" target="_blank" rel="noopener">RabbitMQ基于Raft算法实现的Quorum队列的使用</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://k09fnt46xc.feishu.cn/docx/UpaudOcYIoYJiQxheJcc7VHHnSg?from=from_copylink&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;RabbitMQ基于Raft算
+      
+    
+    </summary>
+    
+    
+      <category term="其它" scheme="http://yoursite.com/tags/%E5%85%B6%E5%AE%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>音视频基础概念</title>
     <link href="http://yoursite.com/2023/11/19/WebRTC%E4%B9%8B%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
     <id>http://yoursite.com/2023/11/19/WebRTC之音视频基础概念/</id>
@@ -461,41 +484,6 @@
     
     
       <category term="计算机基础" scheme="http://yoursite.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一些工具类</title>
-    <link href="http://yoursite.com/2019/09/23/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E4%B8%80%E4%BA%9B%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
-    <id>http://yoursite.com/2019/09/23/Java基础之一些工具类/</id>
-    <published>2019-09-23T12:56:21.000Z</published>
-    <updated>2021-07-03T01:30:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="BigDecimal"><a href="#BigDecimal" class="headerlink" title="BigDecimal"></a>BigDecimal</h3><ul><li>基本方法：加（add(BigDecimal)）、减（subtract(BigDecimal)）、乘（multiply(BigDecimal)）、除（divide(BigDecimal)）。</li><li>除法时需要传入小数点后的位数和取值方式。<ul><li>RoundingMode.CEILING：向正无限大方向舍入的舍入模式。</li><li>RoundingMode.FLOOR：向负无限大方向舍入的舍入模式。</li><li>RoundingMode.DOWN：向零方向舍入的舍入模式。</li><li>RoundingMode.UP：远离零方向舍入的舍入模式。</li><li>RoundingMode.HALF_DOWN：向最接近数字方向舍入的舍入模式，如果与两个相邻数字的距离相等，则向下舍入。</li><li>RoundingMode.HALF_UP：向最接近数字方向舍入的舍入模式，如果与两个相邻数字的距离相等，则向上舍入。</li><li>RoundingMode.HALF_EVEN：向最接近数字方向舍入的舍入模式，如果与两个相邻数字的距离相等，则向相邻的偶数舍入。</li><li>RoundingMode.UNNECESSARY用于断言请求的操作具有精确结果的舍入模式，因此不需要舍入。</li></ul></li><li>stripTrailingZeros()方法可以去除尾部的0，然后可以用scale()获取小数点的位数。</li><li>toString()方法可能是科学计数法所以可以使用toPlainString()方法转换为字符串。</li><li>Double转BigDecimal使用BigDecimal.valueOf(Double)而不是new BigDecimal(Double)否则可能会丢失精度。<a id="more"></a></li></ul><h3 id="时间类"><a href="#时间类" class="headerlink" title="时间类"></a>时间类</h3><pre><code>java.sql.Datejava.util.Datejava.util.Calendarjava.time.    LocalDate       只包含日期，比如：2018-09-24    LocalTime       只包含时间，比如：10:32:10    LocalDateTime   包含日期和时间，比如：2018-09-24 10:32:10    时间和字符串之间的相互转换：    DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);    LocalDateTime now = LocalDateTime.now();    String nowText = now.format(formatter);    LocalDateTime datetime = LocalDateTime.parse(nowText, formatter);java.util.concurrent.TimeUnitorg.apache.commons.lang3.time.    DateUtils    DateFormatUtils</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;BigDecimal&quot;&gt;&lt;a href=&quot;#BigDecimal&quot; class=&quot;headerlink&quot; title=&quot;BigDecimal&quot;&gt;&lt;/a&gt;BigDecimal&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;基本方法：加（add(BigDecimal)）、减（subtract(BigDecimal)）、乘（multiply(BigDecimal)）、除（divide(BigDecimal)）。&lt;/li&gt;
-&lt;li&gt;除法时需要传入小数点后的位数和取值方式。&lt;ul&gt;
-&lt;li&gt;RoundingMode.CEILING：向正无限大方向舍入的舍入模式。&lt;/li&gt;
-&lt;li&gt;RoundingMode.FLOOR：向负无限大方向舍入的舍入模式。&lt;/li&gt;
-&lt;li&gt;RoundingMode.DOWN：向零方向舍入的舍入模式。&lt;/li&gt;
-&lt;li&gt;RoundingMode.UP：远离零方向舍入的舍入模式。&lt;/li&gt;
-&lt;li&gt;RoundingMode.HALF_DOWN：向最接近数字方向舍入的舍入模式，如果与两个相邻数字的距离相等，则向下舍入。&lt;/li&gt;
-&lt;li&gt;RoundingMode.HALF_UP：向最接近数字方向舍入的舍入模式，如果与两个相邻数字的距离相等，则向上舍入。&lt;/li&gt;
-&lt;li&gt;RoundingMode.HALF_EVEN：向最接近数字方向舍入的舍入模式，如果与两个相邻数字的距离相等，则向相邻的偶数舍入。&lt;/li&gt;
-&lt;li&gt;RoundingMode.UNNECESSARY用于断言请求的操作具有精确结果的舍入模式，因此不需要舍入。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;stripTrailingZeros()方法可以去除尾部的0，然后可以用scale()获取小数点的位数。&lt;/li&gt;
-&lt;li&gt;toString()方法可能是科学计数法所以可以使用toPlainString()方法转换为字符串。&lt;/li&gt;
-&lt;li&gt;Double转BigDecimal使用BigDecimal.valueOf(Double)而不是new BigDecimal(Double)否则可能会丢失精度。
-    
-    </summary>
-    
-    
-      <category term="Java基础" scheme="http://yoursite.com/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
