@@ -86,7 +86,12 @@
 <li>docker pull jupyter/all-spark-notebook</li>
 <li>docker run -p 8888:8888 -p 4040:4040 –name jupyter -e JUPYTER_ENABLE_LAB=yes -v /usr/local/jupyter:/home/jovyan/work/ jupyter/all-spark-notebook</li>
 </ol>
-
+<h3 id="网络模式"><a href="#网络模式" class="headerlink" title="网络模式"></a>网络模式</h3><p>–net=bridge<br>当 Docker 进程启动时，会在主机上创建一个名为docker0的虚拟网桥，此主机上启动的 Docker 容器会连接到这个虚拟网桥上。虚拟网桥的工作方式和物理交换机类似，这样主机上的所有容器就通过交换机连在了一个二层网络中。从 docker0 子网中分配一个IP给容器使用，并设置docker0的 IP 地址为容器的默认网关。在主机上创建一对虚拟网卡veth pair设备，Docker 将 veth pair 设备的一端放在新创建的容器 中，并命名为 eth0（容器的网卡），另一端放在主机中，以vethxxx这样类似的名字命名，并将这个网络设备加入到 docker0 网桥中。可以通过brctl show命令查看：<br>–net=host<br>–net=container<br>–net=none</p>
+<h3 id="数据共享和持久化"><a href="#数据共享和持久化" class="headerlink" title="数据共享和持久化"></a>数据共享和持久化</h3><p>数据卷<br>挂载主机目录</p>
+<p>·volume 会引起 docker 目录膨胀，因为既要存镜像，又要存 volume，最好不要放在系统盘，将docker 的安装目录配置到其他更大的挂载盘</p>
+<p>·两者有一个不同的行为：当容器外的对应目录是空的，volume 会先将容器内的内容拷贝到容器外目录，而 mount 会将外部的目录覆盖容器内部目录</p>
+<p>·volume 还有一个不如 bind mount 的地方，不能 直接挂载文件，例如挂载 nginx 容器的配置文件：nginx.conf</p>
+<h3 id="制作镜像-Dockerfile"><a href="#制作镜像-Dockerfile" class="headerlink" title="制作镜像 - Dockerfile"></a>制作镜像 - Dockerfile</h3>
       
     </div>
       
@@ -213,10 +218,6 @@
   <ul class="entry">
     
       <li>
-        <a href="/3017/08/16/一些知识点的链接/"></a>
-      </li>
-    
-      <li>
         <a href="/2123/08/30/基础之MySQL原理/">MySQL原理</a>
       </li>
     
@@ -230,6 +231,10 @@
     
       <li>
         <a href="/2023/11/24/其它之RabbitMQ之Quorum队列的使用/">RabbitMQ之Quorum队列的使用</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/19/WebRTC之音视频基础概念/">音视频基础概念</a>
       </li>
     
   </ul>
