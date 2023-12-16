@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>利用VNC远程控制树莓派 › 但行好事，莫问前程</title>
+  <title>MySQL线程池 › 但行好事，莫问前程</title>
   <meta name="author" content="fengbo">
   
   <meta name="description" content="不想当架构师的程序员不是好厨师 ，不认为PHP是世界上最好的编程语言的Python开发者不是一个好的Javaer。">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="利用VNC远程控制树莓派">
+  <meta property="og:title" content="MySQL线程池">
   <meta property="og:site_name" content="但行好事，莫问前程">
 
   
@@ -52,30 +52,16 @@
     <header>
       
   
-    <h1 class="title">利用VNC远程控制树莓派</h1>
+    <h1 class="title">MySQL线程池</h1>
   
 
       
-        <time datetime="2020-01-29T10:44:51.000Z">2020-01-29</time>
+        <time datetime="2023-12-17T07:33:52.000Z">2023-12-17</time>
       
     </header>
     <div class="entry">
       
-        <h3 id="设置树莓派启动方式"><a href="#设置树莓派启动方式" class="headerlink" title="设置树莓派启动方式"></a>设置树莓派启动方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="OpenVPN"><a href="#OpenVPN" class="headerlink" title="OpenVPN"></a>OpenVPN</h2><h3 id="OpenVPN客户端和服务器端安装-OpenVPN配置详解"><a href="#OpenVPN客户端和服务器端安装-OpenVPN配置详解" class="headerlink" title="OpenVPN客户端和服务器端安装 | OpenVPN配置详解"></a><a href="https://www.ilanni.com/?p=9837" target="_blank" rel="noopener">OpenVPN客户端和服务器端安装</a> | <a href="https://www.ilanni.com/?p=9847" target="_blank" rel="noopener">OpenVPN配置详解</a></h3><h2 id="VPC软件"><a href="#VPC软件" class="headerlink" title="VPC软件"></a>VPC软件</h2><h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><ol>
-<li>服务端安装并运行VNC<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install tightvncserver</span><br><span class="line">tightvncserver</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>然后设置密码，输入控制密码，选择性输入查看密码，查看密码只能用来查看桌面，而控制密码才能对桌面进行操作。每个用户可以启动多个VNCSERVER远程桌面，它们用ip加端口号：ip:1、ip:2、ip:3 来标识、区分，使用同一端口会使另外登录的用户自动退出。</p>
-<ol start="2">
-<li>停止VNC窗口<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vncserver -kill:1</span><br><span class="line"># 修改密码</span><br><span class="line">vncpasswd</span><br><span class="line"># 重启服务</span><br><span class="line">service vncserver restart</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><ol>
-<li>Windows10可以直接安装TightVNC Viewer。</li>
-<li>安卓手机可以安装RealVNC Viewer。</li>
-</ol>
+        <p><a href="https://k09fnt46xc.feishu.cn/docx/AsDpddWfjojsxexY7j3ctoRwnvg?from=from_copylink" target="_blank" rel="noopener">MySQL线程池</a></p>
 
       
     </div>
@@ -85,7 +71,7 @@
         
   
   <div class="tags">
-    <a href="/tags/硬件/">硬件</a>
+    <a href="/tags/其它/">其它</a>
   </div>
 
         

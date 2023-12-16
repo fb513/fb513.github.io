@@ -53,6 +53,85 @@
     <header>
       
   
+    <h1 class="title"><a href="/2017/06/22/Java基础之内部类/">Java内部类</a></h1>
+  
+
+      
+        <time datetime="2017-06-22T02:09:31.000Z">2017-06-22</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="非静态内部内与静态内部类"><a href="#非静态内部内与静态内部类" class="headerlink" title="非静态内部内与静态内部类"></a>非静态内部内与静态内部类</h3><pre><code>// 构建一个静态内部类实例
+Outer.Inner in = new Outer.Inner();
+// 方法静态内部类的静态方法
+Outer.Inner.静态方法();
+// 构建一个非静态内部类
+Outer.Inner in = new Outer().new Inner();
+</code></pre><ul>
+<li>非静态内部类：相当于一个成员函数的位置。可以使用任意访问控制符，如public、protected、private等。</li>
+<li>静态内部类：相当于外部内。</li>
+<li>非静态内部类不能存在任何static的变量和方法，但是可以定义常量。因为非静态内部类是要依赖于外部类的实例，而静态变量和方法是不依赖对象的，仅于类相关。即在加载静态域时，根本没有外部类。常量是编译器就可以确定的，放在常量池中。
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2017/06/22/Java基础之内部类/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2017/06/21/Java基础之Java关键字/">Java关键字</a></h1>
+  
+
+      
+        <time datetime="2017-06-21T05:56:21.000Z">2017-06-21</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h2 id="常见关键字"><a href="#常见关键字" class="headerlink" title="常见关键字"></a>常见关键字</h2><pre><code>if  else  switch  case  for  do  while  try  catch  finally  null  break  continue  return  throw  throws  void
+boolean  true  false  char  byte  short  int  long  float  double  
+class  interface  enum  abstract  import  extends  implements  super  this  package  new
+public  protected  default  private volatile synchronized 保留字(goto  const)
+</code></pre>
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2017/06/21/Java基础之Java关键字/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2017/05/31/其它之MySQL基础/">MySQL基础</a></h1>
   
 
@@ -228,19 +307,19 @@
       </li>
     
       <li>
+        <a href="/2023/12/17/其它之MySQL线程池/">MySQL线程池</a>
+      </li>
+    
+      <li>
+        <a href="/2023/12/16/其它之InnoDB性能优化基础/">InnoDB性能优化基础</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/03/其它之Java8之后的版本新特性/">Java8之后的版本新特性</a>
       </li>
     
       <li>
         <a href="/2023/12/02/其它之MySQL8.0新特性/">MySQL8.0新特性</a>
-      </li>
-    
-      <li>
-        <a href="/2023/11/24/其它之RabbitMQ之Quorum队列的使用/">RabbitMQ之Quorum队列的使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/11/19/WebRTC之音视频基础概念/">音视频基础概念</a>
       </li>
     
   </ul>

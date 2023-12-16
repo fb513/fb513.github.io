@@ -53,6 +53,72 @@
     <header>
       
   
+    <h1 class="title"><a href="/2017/06/30/其它之Git安装和使用/">Git的安装和使用</a></h1>
+  
+
+      
+        <time datetime="2017-06-30T02:44:31.000Z">2017-06-30</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h4 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a><a href="http://www.cnblogs.com/seayxu/p/5548243.html" target="_blank" rel="noopener">Hexo配置</a></h4><p>重装hexo时，直接从Git上克隆下源码然后直接执行npm install –save hexo-deployer-git命令就好。<br>
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2017/06/30/其它之Git安装和使用/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title"><a href="/2017/06/25/其它之Redis基础/">Redis基础</a></h1>
+  
+
+      
+        <time datetime="2017-06-25T09:35:46.000Z">2017-06-25</time>
+      
+    </header>
+    <div class="entry">
+      
+        <p><a href="http://www.cnblogs.com/huangjacky/p/3700473.html" target="_blank" rel="noopener">redis配置文件解析</a>，Redis是一种基于键值对（key-value）的NoSQL数据库。Redis中的值可以是由string（字符串）、hash（哈希）、list（列表）、set（集合）、zset（有序集合）、Bitmaps（位图）、HyperLogLog、GEO（地理信息定位）等多种数据结构和算法组成。Redis使用了单线程架构和I/O多路复用模型来实现高性能的内存数据库服务。因为Redis是单线程来处理命令，所以一条命令从客户端到服务器端不会被立即执行，所有命令都会进入一个队列中，然后被逐个执行。</p>
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2017/06/25/其它之Redis基础/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2017/06/22/JavaWeb-listener和filter/">Listener和filter</a></h1>
   
 
@@ -271,85 +337,6 @@
 
 
 
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2017/06/22/Java基础之内部类/">Java内部类</a></h1>
-  
-
-      
-        <time datetime="2017-06-22T02:09:31.000Z">2017-06-22</time>
-      
-    </header>
-    <div class="entry">
-      
-        <h3 id="非静态内部内与静态内部类"><a href="#非静态内部内与静态内部类" class="headerlink" title="非静态内部内与静态内部类"></a>非静态内部内与静态内部类</h3><pre><code>// 构建一个静态内部类实例
-Outer.Inner in = new Outer.Inner();
-// 方法静态内部类的静态方法
-Outer.Inner.静态方法();
-// 构建一个非静态内部类
-Outer.Inner in = new Outer().new Inner();
-</code></pre><ul>
-<li>非静态内部类：相当于一个成员函数的位置。可以使用任意访问控制符，如public、protected、private等。</li>
-<li>静态内部类：相当于外部内。</li>
-<li>非静态内部类不能存在任何static的变量和方法，但是可以定义常量。因为非静态内部类是要依赖于外部类的实例，而静态变量和方法是不依赖对象的，仅于类相关。即在加载静态域时，根本没有外部类。常量是编译器就可以确定的，放在常量池中。
-      
-    </div>
-      
-        
-        <footer>
-          <div class="alignleft">
-            <a href="/2017/06/22/Java基础之内部类/#more" class="more-link">Read More ›</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-      </footer>
-  </div>
-</article>
-
-
-
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2017/06/21/Java基础之Java关键字/">Java关键字</a></h1>
-  
-
-      
-        <time datetime="2017-06-21T05:56:21.000Z">2017-06-21</time>
-      
-    </header>
-    <div class="entry">
-      
-        <h2 id="常见关键字"><a href="#常见关键字" class="headerlink" title="常见关键字"></a>常见关键字</h2><pre><code>if  else  switch  case  for  do  while  try  catch  finally  null  break  continue  return  throw  throws  void
-boolean  true  false  char  byte  short  int  long  float  double  
-class  interface  enum  abstract  import  extends  implements  super  this  package  new
-public  protected  default  private volatile synchronized 保留字(goto  const)
-</code></pre>
-      
-    </div>
-      
-        
-        <footer>
-          <div class="alignleft">
-            <a href="/2017/06/21/Java基础之Java关键字/#more" class="more-link">Read More ›</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-      </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -435,19 +422,19 @@ public  protected  default  private volatile synchronized 保留字(goto  const)
       </li>
     
       <li>
+        <a href="/2023/12/17/其它之MySQL线程池/">MySQL线程池</a>
+      </li>
+    
+      <li>
+        <a href="/2023/12/16/其它之InnoDB性能优化基础/">InnoDB性能优化基础</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/03/其它之Java8之后的版本新特性/">Java8之后的版本新特性</a>
       </li>
     
       <li>
         <a href="/2023/12/02/其它之MySQL8.0新特性/">MySQL8.0新特性</a>
-      </li>
-    
-      <li>
-        <a href="/2023/11/24/其它之RabbitMQ之Quorum队列的使用/">RabbitMQ之Quorum队列的使用</a>
-      </li>
-    
-      <li>
-        <a href="/2023/11/19/WebRTC之音视频基础概念/">音视频基础概念</a>
       </li>
     
   </ul>

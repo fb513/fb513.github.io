@@ -23,6 +23,44 @@
     
     
     <entry>
+      <title>MySQL线程池</title>
+      <link href="/2023/12/17/%E5%85%B6%E5%AE%83%E4%B9%8BMySQL%E7%BA%BF%E7%A8%8B%E6%B1%A0/"/>
+      <url>/2023/12/17/%E5%85%B6%E5%AE%83%E4%B9%8BMySQL%E7%BA%BF%E7%A8%8B%E6%B1%A0/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://k09fnt46xc.feishu.cn/docx/AsDpddWfjojsxexY7j3ctoRwnvg?from=from_copylink" target="_blank" rel="noopener">MySQL线程池</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 其它 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>InnoDB性能优化基础</title>
+      <link href="/2023/12/16/%E5%85%B6%E5%AE%83%E4%B9%8BInnoDB%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%9F%BA%E7%A1%80/"/>
+      <url>/2023/12/16/%E5%85%B6%E5%AE%83%E4%B9%8BInnoDB%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://k09fnt46xc.feishu.cn/docx/RIb1d1ibuoCWdNxM5QNcsGYSnQd?from=from_copylink" target="_blank" rel="noopener">InnoDB性能优化基础</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 其它 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java8之后的版本新特性</title>
       <link href="/2023/12/03/%E5%85%B6%E5%AE%83%E4%B9%8BJava8%E4%B9%8B%E5%90%8E%E7%9A%84%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7/"/>
       <url>/2023/12/03/%E5%85%B6%E5%AE%83%E4%B9%8BJava8%E4%B9%8B%E5%90%8E%E7%9A%84%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7/</url>
@@ -217,7 +255,7 @@
       <link href="/2020/07/11/%E5%85%B6%E5%AE%83%E4%B9%8BDocker%E5%9F%BA%E7%A1%80/"/>
       <url>/2020/07/11/%E5%85%B6%E5%AE%83%E4%B9%8BDocker%E5%9F%BA%E7%A1%80/</url>
       
-        <content type="html"><![CDATA[<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ul><li>docker info: 查看Docker服务是否正常。</li><li>docker images: 查看所有镜像。</li><li>docker ps -a: 查看当前系统中存在的容器。-a表示无论是否在运行中，都会被查找到。</li><li>docker start/stop name: 启动或停止容器。</li><li>docker rm name: 删除容器。运行中的容器是无法直接删除的，需要先停止容器运行后才能将其删除。</li><li>docker rmi name: 删除Image。</li><li>docker logs -f -t name: 查看容器日志。-f表示用于监控容器的日志，功能类似于tail -f。-t用来添加时间戳。</li><li>docker exec -it name /bin/bash: 在容器内运行进程。</li><li>docker build -t weather:v1.0 ./: 构建一个镜像。</li><li>docker run -d -p 80:8080 –name weather weather:v1.0: 运行镜像。</li><li>docker tag weather:v1.0 fengbo4213/test:v1.0: 给镜像打标签。</li><li>docker push fengbo4213/test:v1.0: 推送到DockerHub。</li><li>docker cp weather:/app ./: 将未启动容器中的内容拷贝出来，方便查看。</li><li>docker inspect name: 查看容器详细信息。<a id="more"></a></li></ul><h3 id="Docker安装phpmyadmin"><a href="#Docker安装phpmyadmin" class="headerlink" title="Docker安装phpmyadmin"></a>Docker安装phpmyadmin</h3><ol><li>下载phpmyadmin镜像: docker pull phpmyadmin/phpmyadmin</li><li>使用该镜像启动容器: docker run -d –name myadmin -e PMA_HOST=192.168.206.132 -e PMA_PORT=3307 -p 8283:80 phpmyadmin/phpmyadmin</li></ol><h3 id="Docker安装Jupyter-Lab"><a href="#Docker安装Jupyter-Lab" class="headerlink" title="Docker安装Jupyter-Lab"></a>Docker安装Jupyter-Lab</h3><ol><li>docker pull jupyter/all-spark-notebook</li><li>docker run -p 8888:8888 -p 4040:4040 –name jupyter -e JUPYTER_ENABLE_LAB=yes -v /usr/local/jupyter:/home/jovyan/work/ jupyter/all-spark-notebook</li></ol><h3 id="网络模式"><a href="#网络模式" class="headerlink" title="网络模式"></a>网络模式</h3><p>–net=bridge<br>当 Docker 进程启动时，会在主机上创建一个名为docker0的虚拟网桥，此主机上启动的 Docker 容器会连接到这个虚拟网桥上。虚拟网桥的工作方式和物理交换机类似，这样主机上的所有容器就通过交换机连在了一个二层网络中。从 docker0 子网中分配一个IP给容器使用，并设置docker0的 IP 地址为容器的默认网关。在主机上创建一对虚拟网卡veth pair设备，Docker 将 veth pair 设备的一端放在新创建的容器 中，并命名为 eth0（容器的网卡），另一端放在主机中，以vethxxx这样类似的名字命名，并将这个网络设备加入到 docker0 网桥中。可以通过brctl show命令查看：<br>–net=host<br>–net=container<br>–net=none</p><h3 id="数据共享和持久化"><a href="#数据共享和持久化" class="headerlink" title="数据共享和持久化"></a>数据共享和持久化</h3><p>数据卷<br>挂载主机目录</p><p>·volume 会引起 docker 目录膨胀，因为既要存镜像，又要存 volume，最好不要放在系统盘，将docker 的安装目录配置到其他更大的挂载盘</p><p>·两者有一个不同的行为：当容器外的对应目录是空的，volume 会先将容器内的内容拷贝到容器外目录，而 mount 会将外部的目录覆盖容器内部目录</p><p>·volume 还有一个不如 bind mount 的地方，不能 直接挂载文件，例如挂载 nginx 容器的配置文件：nginx.conf</p><h3 id="制作镜像-Dockerfile"><a href="#制作镜像-Dockerfile" class="headerlink" title="制作镜像 - Dockerfile"></a>制作镜像 - Dockerfile</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ul><li>docker info: 查看Docker服务是否正常。</li><li>docker images: 查看所有镜像。</li><li>docker ps -a: 查看当前系统中存在的容器。-a表示无论是否在运行中，都会被查找到。</li><li>docker start/stop name: 启动或停止容器。</li><li>docker rm name: 删除容器。运行中的容器是无法直接删除的，需要先停止容器运行后才能将其删除。</li><li>docker rmi name: 删除Image。</li><li>docker logs -f -t name: 查看容器日志。-f表示用于监控容器的日志，功能类似于tail -f。-t用来添加时间戳。</li><li>docker exec -it name /bin/bash: 在容器内运行进程。</li><li>docker build -t weather:v1.0 ./: 构建一个镜像。</li><li>docker run -d -p 80:8080 –name weather weather:v1.0: 运行镜像。</li><li>docker tag weather:v1.0 fengbo4213/test:v1.0: 给镜像打标签。</li><li>docker push fengbo4213/test:v1.0: 推送到DockerHub。</li><li>docker cp weather:/app ./: 将未启动容器中的内容拷贝出来，方便查看。</li><li>docker inspect name: 查看容器详细信息。<a id="more"></a></li></ul><h3 id="Docker安装phpmyadmin"><a href="#Docker安装phpmyadmin" class="headerlink" title="Docker安装phpmyadmin"></a>Docker安装phpmyadmin</h3><ol><li>下载phpmyadmin镜像: docker pull phpmyadmin/phpmyadmin</li><li>使用该镜像启动容器: docker run -d –name myadmin -e PMA_HOST=192.168.206.132 -e PMA_PORT=3307 -p 8283:80 phpmyadmin/phpmyadmin</li></ol><h3 id="Docker安装Jupyter-Lab"><a href="#Docker安装Jupyter-Lab" class="headerlink" title="Docker安装Jupyter-Lab"></a>Docker安装Jupyter-Lab</h3><ol><li>docker pull jupyter/all-spark-notebook</li><li>docker run -p 8888:8888 -p 4040:4040 –name jupyter -e JUPYTER_ENABLE_LAB=yes -v /usr/local/jupyter:/home/jovyan/work/ jupyter/all-spark-notebook</li></ol><h3 id="网络模式"><a href="#网络模式" class="headerlink" title="网络模式"></a>网络模式</h3><p>–net=bridge<br>当 Docker 进程启动时，会在主机上创建一个名为docker0的虚拟网桥，此主机上启动的 Docker 容器会连接到这个虚拟网桥上。虚拟网桥的工作方式和物理交换机类似，这样主机上的所有容器就通过交换机连在了一个二层网络中。从 docker0 子网中分配一个IP给容器使用，并设置docker0的 IP 地址为容器的默认网关。在主机上创建一对虚拟网卡veth pair设备，Docker 将 veth pair 设备的一端放在新创建的容器 中，并命名为 eth0（容器的网卡），另一端放在主机中，以vethxxx这样类似的名字命名，并将这个网络设备加入到 docker0 网桥中。可以通过brctl show命令查看：<br>–net=host<br>–net=container<br>–net=none</p><h3 id="数据共享和持久化"><a href="#数据共享和持久化" class="headerlink" title="数据共享和持久化"></a>数据共享和持久化</h3><p>数据卷<br>挂载主机目录</p><p>·volume 会引起 docker 目录膨胀，因为既要存镜像，又要存 volume，最好不要放在系统盘，将docker 的安装目录配置到其他更大的挂载盘</p><p>·两者有一个不同的行为：当容器外的对应目录是空的，volume 会先将容器内的内容拷贝到容器外目录，而 mount 会将外部的目录覆盖容器内部目录</p><p>·volume 还有一个不如 bind mount 的地方，不能 直接挂载文件，例如挂载 nginx 容器的配置文件：nginx.conf</p><h3 id="制作镜像-Dockerfile"><a href="#制作镜像-Dockerfile" class="headerlink" title="制作镜像 - Dockerfile"></a>制作镜像 - Dockerfile</h3><p>ReplicaSet控制Pod的数量<br>Deployment在ReplicaSet的基础上提供滚动更新<br>StatefulSet针对与有状态应用<br>HPA监控负载实现自动扩容</p>]]></content>
       
       
       
