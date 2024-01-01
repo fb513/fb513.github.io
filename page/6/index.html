@@ -53,6 +53,46 @@
     <header>
       
   
+    <h1 class="title"><a href="/2018/09/08/基础之操作系统/">操作系统</a></h1>
+  
+
+      
+        <time datetime="2018-09-07T23:53:07.000Z">2018-09-08</time>
+      
+    </header>
+    <div class="entry">
+      
+        <h3 id="操作系统的引导"><a href="#操作系统的引导" class="headerlink" title="操作系统的引导"></a>操作系统的引导</h3><ol>
+<li>开机时，CS=0xFFFF IP=0x0000，所以会跳转到固化在内存中的基本输入输出系统(BIOS)；</li>
+<li>BIOS从引导扇区(0磁道0扇区)读取bootsect.s(512k)到内存中。</li>
+<li>bootsect.s将操作系统读到内存中。1. 读入setup；2. 在屏幕上打出logo；3. 调用13号中断读取操作系统后面的system部分。</li>
+<li>setup完成操作系统启动前的初始化，获取硬件信息如内存的大小等。</li>
+<li>setup进入保护模式，然后跳转到system模块的head.s中。</li>
+<li>head.s再次初始化GDT表等，然后调用main函数(汇编调用C函数)。</li>
+<li>main函数初始化页表等资源，然后阻塞。
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2018/09/08/基础之操作系统/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2018/08/18/其它之Linux使用/">Linux使用</a></h1>
   
 
@@ -280,43 +320,6 @@
 
 
 
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2018/06/30/Spring事务/">Spring事务</a></h1>
-  
-
-      
-        <time datetime="2018-06-30T08:28:27.000Z">2018-06-30</time>
-      
-    </header>
-    <div class="entry">
-      
-        <h2 id="事务基础概念"><a href="#事务基础概念" class="headerlink" title="事务基础概念"></a>事务基础概念</h2><ul>
-<li>原子性：事务包含的所有操作是一个整体，这些操作要么全部提交成功，要么只要有一个操作失败，就全部失败。</li>
-<li>一致性：甲乙共有400元钱，甲提交转账100给乙的请求后，不管操作成功还是失败，甲乙依旧共有400元钱。</li>
-<li>持久性：一旦整个事务提交成功，对数据所做的变更将被记录并不可逆转。</li>
-<li>隔离性：规定了各个事务之间相互影响的程度。一般为事务指定4种隔离级别，即下面的事务隔离级别。
-      
-    </div>
-      
-        
-        <footer>
-          <div class="alignleft">
-            <a href="/2018/06/30/Spring事务/#more" class="more-link">Read More ›</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-      </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -402,6 +405,10 @@
       </li>
     
       <li>
+        <a href="/2024/01/01/其它之ClickHouse索引/">ClickHouse索引</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/17/其它之MySQL线程池/">MySQL线程池</a>
       </li>
     
@@ -413,10 +420,6 @@
         <a href="/2023/12/03/其它之Java8之后的版本新特性/">Java8之后的版本新特性</a>
       </li>
     
-      <li>
-        <a href="/2023/12/02/其它之MySQL8.0新特性/">MySQL8.0新特性</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -425,7 +428,7 @@
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2023 fengbo
+  &copy; 2024 fengbo
   
 </div>
 <div class="clearfix"></div></footer>

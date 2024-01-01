@@ -53,6 +53,39 @@
     <header>
       
   
+    <h1 class="title"><a href="/2019/07/14/Java设计模式之单例模式/">Java设计模式之单例模式</a></h1>
+  
+
+      
+        <time datetime="2019-07-14T02:49:07.000Z">2019-07-14</time>
+      
+    </header>
+    <div class="entry">
+      
+        <p>该模式保证了一个类只有一个对象实例。一般会将构造方法私有化，使其不能在类的外部通过new关键字实例化该类对象。<br>
+      
+    </div>
+      
+        
+        <footer>
+          <div class="alignleft">
+            <a href="/2019/07/14/Java设计模式之单例模式/#more" class="more-link">Read More ›</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+      </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2019/05/01/Python实现屏幕截图/">Python实现屏幕截图</a></h1>
   
 
@@ -311,46 +344,6 @@
 
 
 
-  <article class="post">
-  <div class="post-content">
-    <header>
-      
-  
-    <h1 class="title"><a href="/2018/09/08/基础之操作系统/">操作系统</a></h1>
-  
-
-      
-        <time datetime="2018-09-07T23:53:07.000Z">2018-09-08</time>
-      
-    </header>
-    <div class="entry">
-      
-        <h3 id="操作系统的引导"><a href="#操作系统的引导" class="headerlink" title="操作系统的引导"></a>操作系统的引导</h3><ol>
-<li>开机时，CS=0xFFFF IP=0x0000，所以会跳转到固化在内存中的基本输入输出系统(BIOS)；</li>
-<li>BIOS从引导扇区(0磁道0扇区)读取bootsect.s(512k)到内存中。</li>
-<li>bootsect.s将操作系统读到内存中。1. 读入setup；2. 在屏幕上打出logo；3. 调用13号中断读取操作系统后面的system部分。</li>
-<li>setup完成操作系统启动前的初始化，获取硬件信息如内存的大小等。</li>
-<li>setup进入保护模式，然后跳转到system模块的head.s中。</li>
-<li>head.s再次初始化GDT表等，然后调用main函数(汇编调用C函数)。</li>
-<li>main函数初始化页表等资源，然后阻塞。
-      
-    </div>
-      
-        
-        <footer>
-          <div class="alignleft">
-            <a href="/2018/09/08/基础之操作系统/#more" class="more-link">Read More ›</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-      </footer>
-  </div>
-</article>
-
-
-
 
 <nav id="pagination">
   
@@ -436,6 +429,10 @@
       </li>
     
       <li>
+        <a href="/2024/01/01/其它之ClickHouse索引/">ClickHouse索引</a>
+      </li>
+    
+      <li>
         <a href="/2023/12/17/其它之MySQL线程池/">MySQL线程池</a>
       </li>
     
@@ -447,10 +444,6 @@
         <a href="/2023/12/03/其它之Java8之后的版本新特性/">Java8之后的版本新特性</a>
       </li>
     
-      <li>
-        <a href="/2023/12/02/其它之MySQL8.0新特性/">MySQL8.0新特性</a>
-      </li>
-    
   </ul>
 </div>
 
@@ -459,7 +452,7 @@
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2023 fengbo
+  &copy; 2024 fengbo
   
 </div>
 <div class="clearfix"></div></footer>
